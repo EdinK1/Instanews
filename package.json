@@ -1,0 +1,30 @@
+{
+  "name": "instanews",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdinK1/Instanews.git"
+  },
+  "author": "Edin Kaymakqi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdinK1/Instanews/issues"
+  },
+  "homepage": "https://github.com/EdinK1/Instanews#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  }
+}
