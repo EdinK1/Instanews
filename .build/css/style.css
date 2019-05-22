@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box; }
+
+*:before, *:after, * {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Open Sans Light', sans-serif; }
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-top: 100px;
+  padding-block-end: 10px; }
+
+footer {
+  color: #c2c2c2;
+  text-transform: uppercase; }
