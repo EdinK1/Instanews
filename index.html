@@ -13,8 +13,9 @@
     <header class="main-header">
         <img src="/app/img/nyt-logo.svg" alt="logo" class="logo">
 
+        <div class="container">
         <h3>Choose a section:</h3>
-        <select name="categories" class="categories">
+        <select name="categories" id="categories">
                 <option value="sections">Sections ...</option>
                 <option value="home">Home</option>
                 <option value="arts">Arts</option>
@@ -22,17 +23,13 @@
                 <option value="sports">Sports</option>
                 <option value="technology">Technology</option>
                 <option value="fashion">Fashion</option>
-                
               </select>
-
-              <main class="articles">
-
-              </main>
+            </div>
     </header>
+    
+    <ul class="articles"></ul>
 
-    <footer>
-            &copy; Copyright 2019 INSTANEWS
-    </footer>
+    <footer>&copy; Copyright 2019 INSTANEWS</footer>
     
      
     <script
