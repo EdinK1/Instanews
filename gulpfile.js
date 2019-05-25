@@ -1,6 +1,8 @@
 const gulp = require('gulp'),
       terser = require('gulp-terser'),
       sass = require('gulp-sass'),
+      cssnano = require('cssnano'),
+      autoprefixer = require('gulp-prettyerror'),
       rename = require('gulp-rename'),
       browserSync = require('browser-sync').create(),
       eslint = require('gulp-eslint');
@@ -11,6 +13,12 @@ const gulp = require('gulp'),
       gulp.task('sass', function () {
         return gulp.src('app/scss/*.scss')
           .pipe(sass().on('error', sass.logError))
+          .pipe(
+            autoprefixer({
+              browsers: ['last 2 versions']
+            })
+          )
+          .pipe(cssnano())
           .pipe(gulp.dest('./build/css'));
       });
 

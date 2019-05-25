@@ -1,7 +1,23 @@
 let output = $('.articles');
 let select = $('#categories');
 
+
+function loader() {
+    $('.preload').show();
+  }
+  
+  
+  function showResults() {
+    setTimeout(function() {
+      $('.preload').hide();      
+    }, 1000);
+    }
+  
 function getData () { 
+
+
+    loader();
+    showResults();
 
     output.text('');
 
@@ -12,7 +28,6 @@ $.ajax({
     url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=cMfA0NO0S102DbxZsVap17SSVyu0hWxT`
   })
   .done(function (data) {
-
  
     for (let i = 0; i < data.results.length; i++) {
 

@@ -13,10 +13,10 @@
     <header class="main-header">
         <img src="/app/img/nyt-logo.svg" alt="logo" class="logo">
 
-        <div class="container">
+        <div class="select-wrapper">
         <h3>Choose a section:</h3>
         <select name="categories" id="categories">
-                <option value="sections">Sections ...</option>
+                <option value="sections" selected disabled>Sections ...</option>
                 <option value="home">Home</option>
                 <option value="arts">Arts</option>
                 <option value="business">Business</option>
@@ -26,6 +26,8 @@
               </select>
             </div>
     </header>
+    
+    <div class="preload"></div>
     
     <ul class="articles"></ul>
 
