@@ -30,7 +30,6 @@ $.ajax({
   .done(function (data) {
  
     for (let i = 0; i < data.results.length; i++) {
-
         let img = data.results[i].multimedia[4].url;
         let snippet = data.results[i].abstract;
         let url = data.results[i].url;

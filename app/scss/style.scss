@@ -64,10 +64,16 @@
         .description {
             color: #fff;
             position: absolute;
+            cursor: pointer;
             bottom: 0;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
             padding: 0.7rem 0.5rem;
             line-height: 1.5;
+            transition: 0.3s ease-in;
+
+            &:hover {
+                opacity: 0;
+            }
         }
     }
 
