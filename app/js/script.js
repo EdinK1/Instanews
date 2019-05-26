@@ -1,13 +1,13 @@
 let output = $('.articles');
 let select = $('#categories');
-
+let header = $('.main-header');
+let logo = $('.logo');
 
 function loader() {
     $('.preload').show();
   }
-  
-  
-  function showResults() {
+    
+function showResults() {
     setTimeout(function() {
       $('.preload').hide();      
     }, 1000);
@@ -40,6 +40,12 @@ $.ajax({
     '<a href="' + url + '" alt="url" target="_blank">' + '<img src="' + img + '">' + '</a>' +
     '<p class="description">' + snippet + '</p>' +
     '</li>';
+
+    header.css({
+      'height': '250px',
+      'padding-top': '1rem'
+    });
+    logo.css('height', '150px');
 
     output.append(results);
     }
