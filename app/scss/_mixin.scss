@@ -1,0 +1,5 @@
+@mixin custom_layout($display, $rows, $columns) {
+    display: $display;
+    grid-template-rows: $rows;
+    grid-template-columns: $columns;
+}

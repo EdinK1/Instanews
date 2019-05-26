@@ -1,13 +1,11 @@
 const gulp = require('gulp'),
       terser = require('gulp-terser'),
       sass = require('gulp-sass'),
-      cssnano = require('cssnano'),
-      autoprefixer = require('gulp-prettyerror'),
+      cleancss = require('gulp-clean-css'),
+      autoprefixer = require('gulp-autoprefixer'),
       rename = require('gulp-rename'),
       browserSync = require('browser-sync').create(),
       eslint = require('gulp-eslint');
-
-    //   sass.compiler = require('node-sass');
 
 
       gulp.task('sass', function () {
@@ -17,8 +15,8 @@ const gulp = require('gulp'),
             autoprefixer({
               browsers: ['last 2 versions']
             })
-          )
-          .pipe(cssnano())
+            .pipe(cleancss())
+          ).pipe(rename({ extname: '.min.css' }))
           .pipe(gulp.dest('./build/css'));
       });
 
@@ -35,7 +33,7 @@ return gulp
       keep_fnames: false,
       toplevel: true
   }))
-  .pipe(rename({ extname: '.min.js' }))
+  
   .pipe(gulp.dest('./build/js'));
 });
 
