@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="build/css/style.min.css">
-    <title>Instanews - NYT News Reader</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="build/css/style.min.css">
+  <title>Instanews - NYT News Reader</title>
 </head>
+
 <body>
 
-    <header class="main-header">
-        <img src="/app/img/nyt-logo.svg" alt="logo" class="logo">
+  <header class="main-header">
+    <img src="/app/img/nyt-logo.svg" alt="logo" class="logo">
 
-        <div class="select-wrapper">
-        <h3>Choose a section:</h3>
-        <select name="categories" id="categories">
-                <option value="sections" selected disabled>Sections ...</option>
-                <option value="home">Home</option>
-                <option value="arts">Arts</option>
-                <option value="business">Business</option>
-                <option value="sports">Sports</option>
-                <option value="technology">Technology</option>
-                <option value="fashion">Fashion</option>
-              </select>
-            </div>
-    </header>
-    
-    <div class="preload"></div>
-    
-    <ul class="articles"></ul>
+    <div class="select-wrapper">
+      <h3>Choose a section:</h3>
+      <select name="categories" id="categories">
+        <option value="sections" selected disabled>Sections ...</option>
+        <option value="home">Home</option>
+        <option value="arts">Arts</option>
+        <option value="business">Business</option>
+        <option value="sports">Sports</option>
+        <option value="technology">Technology</option>
+        <option value="fashion">Fashion</option>
+      </select>
+    </div>
+  </header>
 
-    <footer>&copy; Copyright 2019 INSTANEWS</footer>
-    
-     
-    <script
-  src="http://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-    <script src="/app/js/script.js"></script>
+  <div class="preload"></div>
+
+  <ul class="articles"></ul>
+
+  <footer>&copy; Copyright 2019 INSTANEWS</footer>
+
+
+  <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="/app/js/script.js"></script>
 </body>
+
 </html>

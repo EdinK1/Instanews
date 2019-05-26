@@ -5,64 +5,108 @@
 
 .main-header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 470px;
-    
+    height: 85vh;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    @include desktop {
+        justify-content: flex-start;
+        padding-left: 4rem;
+        flex-direction: row;
+    }
+
     img {
         height: 250px;
         width: auto;
         padding-bottom: 0.5rem;
-    }  
-    
-    select {
-        font-size: 1.1rem;
-        color: $base-background;
-        margin-top: 1rem;
-        height: 30px;
-        }
     }
 
-    .preload {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        display: none;
-        background: #000 url('/app/img/loader.gif') no-repeat center;
+    .select-wrapper {
+        margin-top: 0.5rem;
+
+        @include tablet {
+            text-align: left;
+        }
+
+        @include desktop {
+            margin-left: 5rem;
+            text-align: left;
+        }
+
+        select {
+            font-size: 1.1rem;
+            color: $base-background;
+            margin: 1rem 0;
+            height: 30px;
+        }
+    }
+}
+
+.preload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    background: #000 url('/app/img/loader.gif') no-repeat center;
+}
+
+.articles {
+    display: grid;
+
+    @include tablet {
+        @include custom_layout(grid, repeat(3, 1fr), repeat(3, 1fr));
+    }
+
+    @include desktop {
+        @include custom_layout(grid, repeat(3, 1fr), repeat(4, 1fr));
     }
 
     .article {
-            position: relative;
-       
+        position: relative;
+
         img {
             height: 420px;
             width: 100%;
             object-fit: cover;
         }
     }
-        .description {
-            color: #fff;
-            position: absolute;
-            cursor: pointer;
-            bottom: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-            padding: 0.7rem 0.5rem;
-            line-height: 1.5;
-            transition: 0.3s ease-in;
 
-            &:hover {
-                opacity: 0;
-            }
+    .description {
+        color: #fff;
+        position: absolute;
+        cursor: pointer;
+        bottom: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        padding: 0.7rem 0.5rem;
+        line-height: 1.5;
+        transition: 0.3s ease-in;
+
+        @include tablet {
+            line-height: 1.1;
+        }
+
+        &:hover {
+            opacity: 0;
         }
     }
+}
 
 footer {
     color: #c2c2c2;
     padding: 2rem 0;
     text-align: center;
+
+    @include desktop {
+        text-align: left;
+        padding-left: 4rem;
+    }
 }
