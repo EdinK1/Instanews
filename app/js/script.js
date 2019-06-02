@@ -1,3 +1,5 @@
+$(document).ready(() => {
+
 let output = $('.articles');
 let select = $('#categories');
 let header = $('.main-header');
@@ -24,18 +26,18 @@ function getData() {
   const section = $('#categories option:selected').val();
 
   $.ajax({
-      method: 'GET',
       url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=cMfA0NO0S102DbxZsVap17SSVyu0hWxT`
     })
     .done(function (data) {
+      
+      for (let i = 0; i < 12; i++) {
 
-      for (let i = 0; i < data.results.length; i++) {
         let img = data.results[i].multimedia[4].url;
         let snippet = data.results[i].abstract;
         let url = data.results[i].url;
 
-
         let results =
+
           '<li class="article">' +
           '<a href="' + url + '" alt="url" target="_blank">' + '<img src="' + img + '">' + '</a>' +
           '<p class="description">' + snippet + '</p>' +
@@ -67,12 +69,15 @@ function getData() {
           $('.logo').css('height', '100px');
           $('footer').css({
             'text-align': 'left',
-            'padding-left': '1rem'
+            'padding-left': '5rem'
           });
         }
         output.append(results);
       }
+    })
+    .fail(() => {
+      output.append(`<p>Sorry, something went wrong</p>`);
     });
-}
-
-select.on('change', getData);
+  }
+  select.on('change', getData);
+});
