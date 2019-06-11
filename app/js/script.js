@@ -29,8 +29,12 @@ function getData() {
       url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=cMfA0NO0S102DbxZsVap17SSVyu0hWxT`
     })
     .done(function (data) {
+
+      let counter = 0;
       
-      for (let i = 0; i < 12; i++) {
+      for (let i = 0; i < data.results.length; i++) {
+        if (data.results[i].multimedia.length >= 5 && counter < 12) {
+            counter += 1;
 
         let img = data.results[i].multimedia[4].url;
         let snippet = data.results[i].abstract;
@@ -38,10 +42,10 @@ function getData() {
 
         let results =
 
-          '<li class="article">' +
-          '<a href="' + url + '" alt="url" target="_blank">' + '<img src="' + img + '">' + '</a>' +
-          '<p class="description">' + snippet + '</p>' +
-          '</li>';
+          `<li class='article'>
+          <a href=${url} alt='url' target='_blank'><img src=${img}></a>
+          <p class='description'>${snippet}</p>
+          </li>`;
 
 
         const mobile = window.matchMedia('(max-width: 600px)');
@@ -53,7 +57,8 @@ function getData() {
           $('.logo').css('height', '120px');
         }
 
-        if (tablet.matches) {
+        if (tablet.matches) { 
+
           $('.main-header').css('height', '165px');
           $('.logo').css({
             'height': '100px'
@@ -74,6 +79,7 @@ function getData() {
         }
         output.append(results);
       }
+    }
     })
     .fail(() => {
       output.append(`<p>Sorry, something went wrong</p>`);
