@@ -2,8 +2,6 @@ $(document).ready(() => {
 
 let output = $('.articles');
 let select = $('#categories');
-let header = $('.main-header');
-let logo = $('.logo');
 
 function loader() {
   $('.preload').show();
