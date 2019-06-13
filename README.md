@@ -1,10 +1,6 @@
 # [Instanews](https://weatherappjs.netlify.com//)
 
 ### News Website powered by New York Times API
-
-<img src="https://user-images.githubusercontent.com/38442554/59398932-eaeae300-8d46-11e9-867f-862e1ace2b3a.PNG" width="1000px" height="500px">
-<img src="https://user-images.githubusercontent.com/38442554/59398969-14a40a00-8d47-11e9-8fb3-7c173927c6d2.png" width="1000px" height="500px">
-
 # Technologies used
 1. HTML5
 2. Sass
@@ -32,3 +28,9 @@ CSS3 animations are getting better and better everyday. They are very powerful a
 # My notes about the project
 
 The project was a good learning experience overall. I learned how to use APIs, get data from them and use them in my website. I developed my Sass skills as well. Like I said, I really think Sass is the way to go, since it has a lot of cool features one can use. This project was a perfect example of a grid layout which helped me strengthen my CSS3 grid skills. The stretch goal was good too. It helped me learn more about CSS3 animations.
+
+
+# Project Snapshots
+
+<img src="https://user-images.githubusercontent.com/38442554/59398932-eaeae300-8d46-11e9-867f-862e1ace2b3a.PNG" width="1000px" height="500px">
+<img src="https://user-images.githubusercontent.com/38442554/59398969-14a40a00-8d47-11e9-8fb3-7c173927c6d2.png" width="1000px" height="500px">
