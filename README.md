@@ -2,8 +2,8 @@
 
 ### News Website powered by New York Times API
 
-<img src="https://user-images.githubusercontent.com/38442554/59398932-eaeae300-8d46-11e9-867f-862e1ace2b3a.PNG" width="800px" height="500px">
-<img src="https://user-images.githubusercontent.com/38442554/59398969-14a40a00-8d47-11e9-8fb3-7c173927c6d2.png" width="800px" height="500px">
+<img src="https://user-images.githubusercontent.com/38442554/59398932-eaeae300-8d46-11e9-867f-862e1ace2b3a.PNG" width="1000px" height="500px">
+<img src="https://user-images.githubusercontent.com/38442554/59398969-14a40a00-8d47-11e9-8fb3-7c173927c6d2.png" width="1000px" height="500px">
 
 # Technologies used
 1. HTML5
