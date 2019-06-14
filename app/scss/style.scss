@@ -10,9 +10,17 @@
     align-items: center;
     text-align: center;
     height: 85vh;
-
+    
+    &.loaded {
+        height: 250px;
+    }
+  
     @include tablet {
         flex-direction: row;
+        
+        &.loaded {
+            height: 165px;
+        }
     }
 
     @include desktop {
@@ -26,9 +34,19 @@
         width: auto;
         padding-bottom: 0.5rem;
         transition: transform 1s;
+
+        &.loaded {
+            height: 120px;
+        }
     
         &:hover {
         transform: rotate(360deg);
+        }
+
+        @include tablet {
+            &.loaded {
+                height: 100px;
+            }
         }
     }
 
@@ -37,6 +55,11 @@
 
         @include tablet {
             text-align: left;
+
+            &.loaded {
+                text-align: left;
+                padding-left: 2rem;
+            }
         }
 
         @include desktop {
@@ -129,5 +152,10 @@ footer {
     @include desktop {
         text-align: left;
         padding-left: 4rem;
+        
+        &.loaded {
+            text-align: left;
+            padding-left: 5rem
+        }
     }
 }

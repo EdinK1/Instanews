@@ -15,7 +15,6 @@ function showResults() {
 
 function getData() {
 
-
   loader();
   showResults();
 
@@ -27,6 +26,8 @@ function getData() {
       url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=cMfA0NO0S102DbxZsVap17SSVyu0hWxT`
     })
     .done(function (data) {
+
+    $('.main-header, .logo').addClass('loaded');
 
       let counter = 0;
       
@@ -45,36 +46,6 @@ function getData() {
           <p class='description'>${snippet}</p>
           </li>`;
 
-
-        const mobile = window.matchMedia('(max-width: 600px)');
-        const tablet = window.matchMedia('(min-width: 601px) and (max-width: 1239px)')
-        const desktop = window.matchMedia('(min-width: 1240px)');
-
-        if (mobile.matches) {
-          $('.main-header').css('height', '250px');
-          $('.logo').css('height', '120px');
-        }
-
-        if (tablet.matches) { 
-
-          $('.main-header').css('height', '165px');
-          $('.logo').css({
-            'height': '100px'
-          });
-          $('.select-wrapper').css({
-            'text-align': 'left',
-            'padding-left': '2rem'
-          });
-        }
-
-        if (desktop.matches) {
-          $('.main-header').css('height', '165px')
-          $('.logo').css('height', '100px');
-          $('footer').css({
-            'text-align': 'left',
-            'padding-left': '5rem'
-          });
-        }
         output.append(results);
       }
     }
