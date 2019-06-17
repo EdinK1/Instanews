@@ -1,4 +1,4 @@
-# [Instanews](https://weatherappjs.netlify.com//)
+# [Instanews](https://instanews.netlify.com/)
 
 ### News Website powered by New York Times API
 # Technologies used
