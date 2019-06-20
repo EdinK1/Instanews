@@ -20,7 +20,7 @@ function getData() {
 
   output.text('');
 
-  const section = $('#categories option:selected').val();
+  const section = $('select').val();
 
   $.ajax({
       url: `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=cMfA0NO0S102DbxZsVap17SSVyu0hWxT`
